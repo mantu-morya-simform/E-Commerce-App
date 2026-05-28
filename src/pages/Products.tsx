@@ -2,13 +2,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../data/products";
 import { FcRating } from "react-icons/fc";
 import type { Product } from "../types/productType";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../hook/useCart";
 
 const Products = () => {
   const { item } = useParams();
   const navigate = useNavigate();
-  const { dispatch } = useContext(CartContext);
+  const { dispatch } = useCart();
 
   const filteredProducts: Product[] = products.filter(
     (prod) => prod.type === item,

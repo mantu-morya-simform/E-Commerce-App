@@ -2,12 +2,11 @@ import { useParams } from "react-router-dom";
 import { products } from "../data/products";
 import type { Product } from "../types/productType";
 import { FcRating } from "react-icons/fc";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../hook/useCart";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const { dispatch } = useContext(CartContext);
+  const { dispatch } = useCart();
 
   const product: Product | undefined = products.find(
     (product) => product.id === Number(id),

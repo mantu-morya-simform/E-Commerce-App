@@ -1,14 +1,15 @@
 import { FcRating } from "react-icons/fc";
 import { products } from "../data/products";
-import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext } from "../context/CartContext";
+
+import { useCart } from "../hook/useCart";
+import { useState } from "react";
 
 const Featured = () => {
   const [range, setRange] = useState(4);
   const featuredProduct = products.slice(0, range);
   const navigate = useNavigate();
-  const { dispatch } = useContext(CartContext);
+  const { dispatch } = useCart();
 
   function handleAddMore() {
     setRange((prev) => prev + 4);

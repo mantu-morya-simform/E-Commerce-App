@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-import { CartContext } from "../context/CartContext";
+import { useCart } from "../hook/useCart";
 
 const Navbar = () => {
-  const { cart } = useContext(CartContext);
+  const { cart } = useCart();
 
   return (
     <header className="border-b bg-gray-900 fixed top-0 left-0 w-full z-50">

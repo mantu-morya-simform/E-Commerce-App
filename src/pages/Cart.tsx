@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useCart } from "../hook/useCart";
 
 const Cart = () => {
-  const { cart, dispatch } = useContext(CartContext);
+  const { cart, dispatch } = useCart();
 
   return (
     <div className="p-6">
