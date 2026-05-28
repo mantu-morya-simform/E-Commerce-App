@@ -15,7 +15,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative min-w-screen max-w-4xl mx-auto overflow-hidden rounded-xl border">
+    <div className="relative min-w-full max-w-4xl mx-auto overflow-hidden border">
       {/* image */}
       <img
         src={data[current].image}

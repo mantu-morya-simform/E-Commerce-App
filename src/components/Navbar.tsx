@@ -1,12 +1,16 @@
+import { useContext } from "react";
 import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
+  const { cart } = useContext(CartContext);
+
   return (
-    <header className="border-b">
+    <header className="border-b bg-gray-900 fixed top-0 left-0 w-full z-50">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Left Side */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-15 text-gray-100">
           <NavLink to="/">
             <img
               src="/Resources/Xiaomi_logo.svg"
@@ -45,12 +49,18 @@ const Navbar = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-15 text-gray-100">
           <NavLink
             to="cart"
             className="text-2xl cursor-pointer hover:text-orange-500"
           >
-            <FiShoppingCart />
+            <div className="relative inline-block">
+              <FiShoppingCart />
+
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded-full">
+                {cart.length}
+              </span>
+            </div>
           </NavLink>
 
           <NavLink
