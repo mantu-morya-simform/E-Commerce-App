@@ -3,15 +3,16 @@ import { products } from "../data/products";
 import { FcRating } from "react-icons/fc";
 import type { Product } from "../types/productType";
 import { useCart } from "../hook/useCart";
+import { useMemo } from "react";
 
 const Products = () => {
   const { item } = useParams();
   const navigate = useNavigate();
   const { dispatch } = useCart();
 
-  const filteredProducts: Product[] = products.filter(
-    (prod) => prod.type === item,
-  );
+  const filteredProducts: Product[] = useMemo(() => {
+    return products.filter((prod) => prod.type === item);
+  }, [item]);
 
   function handleOpenProduct(id: number) {
     navigate(`/product/${id}`);
