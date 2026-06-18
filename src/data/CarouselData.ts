@@ -1,0 +1,51 @@
+export const carouselData = [
+  {
+    id: 1,
+    title: "Phones",
+    image: "/Resources/corosel/Banner-1.jpg",
+    description: "Explore latest smartphones",
+    path: "/products/phones",
+  },
+  {
+    id: 2,
+    title: "Tablets",
+    image: "/Resources/corosel/Banner-2.jpg",
+    description: "Best tablets for work and entertainment",
+    path: "/products/tablets",
+  },
+  {
+    id: 3,
+    title: "TV & Smart Home",
+    image: "/Resources/corosel/Banner-3.jpg",
+    description: "Smart TVs and home devices",
+    path: "/products/tv-smart-home",
+  },
+  {
+    id: 4,
+    title: "Smart Watch & Audio",
+    image: "/Resources/corosel/Banner-4.jpg",
+    description: "Premium audio and smart wearables",
+    path: "/products/smart-watch-audio",
+  },
+  {
+    id: 5,
+    title: "Smart Watch & Audio",
+    image: "/Resources/corosel/Banner-5.jpg",
+    description: "Android tablet with premium display.",
+    path: "/products/smart-watch-audio",
+  },
+  {
+    id: 6,
+    title: "Smart Watch & Audio",
+    image: "/Resources/corosel/Banner-6.jpg",
+    description: "Advanced smartwatch with health tracking.",
+    path: "/products/smart-watch-audio",
+  },
+  {
+    id: 7,
+    title: "Smart Watch & Audio",
+    image: "/Resources/corosel/Banner-7.jpg",
+    description: "Ultra HD Smart TV with Dolby Vision.",
+    path: "/products/smart-watch-audio",
+  },
+];
