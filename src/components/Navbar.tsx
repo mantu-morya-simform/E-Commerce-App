@@ -10,7 +10,11 @@ const navItems = [
   { name: "Watch & Audio", path: "/products/smart-watch-audio" },
 ];
 
-const Navbar = () => {
+const Navbar = ({
+  searchRef,
+}: {
+  searchRef: React.RefObject<HTMLInputElement | null>;
+}) => {
   const { cart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -51,6 +55,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
+              ref={searchRef}
               className="bg-transparent outline-none text-sm text-white placeholder-gray-400 w-32 lg:w-48"
             />
           </div>
@@ -88,6 +93,9 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search products..."
+              id="site-search-mobile"
+              data-search="site-search"
+              aria-label="Search products"
               className="bg-transparent outline-none text-white w-full"
             />
           </div>
